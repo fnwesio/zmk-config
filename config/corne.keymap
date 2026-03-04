@@ -5,7 +5,9 @@
 
 / {
     behaviors {
-        lt_fast: layer_tap_fast {
+        // We are changing the internal node name to match the label
+        // to ensure the compiler can't miss the binding.
+        lt_fast: lt_fast {
             compatible = "zmk,behavior-layer-tap";
             label = "LT_FAST";
             #binding-cells = <2>;
